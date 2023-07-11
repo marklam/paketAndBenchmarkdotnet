@@ -1,11 +1,19 @@
 # Repro case for BenchmarkDotNet issue
 
+## To reproduce
 ```sh
 dotnet tool restore
+dotnet paket install
 dotnet run --project Bench --configuration Release
 ```
+or for the F#-averse:
+```sh
+dotnet tool restore
+dotnet paket install
+dotnet run --project BenchCS --configuration Release
+```
 
-Fails with:
+## Example output
 
 ```text
 c:\git\temp\paketAndBenchmarkdotnet\Bench>dotnet run --configuration Release
